@@ -11,8 +11,12 @@
       <br>
 
       <ProductSlider :products="products"/>
+      <br><br><br>
+      <NewsLetter/>
     </v-container>
     <TheFooter/>
+
+    <ScrollTop/>
   </div>
 </template>
 
@@ -21,6 +25,8 @@ import NavBar from '~/components/NavBar.vue';
 import TheFooter from '~/components/TheFooter.vue';
 import HomeCarousel from '~/components/HomeCarousel.vue';
 import ProductSlider from '~/components/ProductSlider.vue';
+import NewsLetter from '~/components/NewsLetter.vue';
+import ScrollTop from '~/components/ScrollTop.vue'
 
 export default {
   name: 'IndexPage',
@@ -37,6 +43,6 @@ export default {
     this.products = await this.$content('products').fetch()
   },
 
-  components: { NavBar, TheFooter, HomeCarousel, ProductSlider },
+  components: { NavBar, TheFooter, HomeCarousel, ProductSlider, NewsLetter, ScrollTop },
 }
 </script>
